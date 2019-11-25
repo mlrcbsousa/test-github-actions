@@ -4,6 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    # random commit
+
     @posts = Post.all
   end
 
