@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       db:
-        image: postgres:11
+        image: postgres:9.6.9
         ports: ['5433:5432']
         options: >-
           --health-cmd pg_isready
@@ -41,5 +41,5 @@ jobs:
           sudo apt-get -yqq install libpq-dev
           bundle config git.allow_insecure true
           bundle install --jobs 4 --retry 3
-          bundle exec rails db:setup
-          bundle exec rails rspec
+          bin/rails db:setup
+          bin/rails spec

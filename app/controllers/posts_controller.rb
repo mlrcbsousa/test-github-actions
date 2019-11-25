@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     # random commit
-
+    # another random commit
     @posts = Post.all
   end
 
